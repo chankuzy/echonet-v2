@@ -1,69 +1,34 @@
-# React + TypeScript + Vite
+# Echonet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Echonet** is a modern, API-powered single-page social platform built with **React** and **Tailwind CSS**. Designed with a sleek, mobile-first philosophy and dark/light mode toggle, Echonet combines performance, elegant UI/UX, and scalability for the next generation of social interaction.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ⚡ **Single Page Application (SPA)** using React + Vite
+- 🎨 **Tailwind CSS** for clean, responsive design
+- 🌗 **Dark/Light Mode** toggle with persistent user preference
+- 📱 **Mobile-First Design** — Optimized for all screen sizes
+- 🔌 **API-Driven Architecture** (fully decoupled frontend)
+- 🔒 Built-in structure for **Auth, Notifications, Posts, Feeds**
+- ✨ Clean, modular components with accessible design patterns
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧱 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Layer        | Technology            |
+|--------------|------------------------|
+| Frontend     | React (Vite)           |
+| Styling      | Tailwind CSS           |
+| Routing      | React Router           |
+| State Mgmt   | Zustand / Context API (TBD) |
+| API Backend  | Laravel (or any REST API) |
+| Auth         | JWT or Sanctum (recommended) |
+| Deployment   | Vercel / Netlify / Custom |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure (Tentative)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
