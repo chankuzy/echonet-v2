@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.emoji-picker-react {
+  --epr-emoji-size: 24px;
+  --epr-category-label-height: 30px;
+  box-shadow: none !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 0 !important;
+}
+
+/* Dark mode support */
+.dark .emoji-picker-react {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+}
+body {
+  scrollbar-width: 1px;
+}

@@ -1,6 +1,6 @@
 // src/components/auth/SocialAuthButtons.tsx
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
-import { GithubIcon } from 'lucide-react'; // Using Lucide for GitHub as it has a good one
+import { GithubIcon } from 'lucide-react';
 import Button from '../ui/Button';
 import { useAuthStore } from '../../stores/authStore';
 

@@ -1,4 +1,3 @@
-// src/components/ui/Button.jsx
 import { motion } from 'framer-motion';
 
 import React from 'react';

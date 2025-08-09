@@ -1,18 +1,10 @@
-// src/pages/Login.jsx
 import { motion } from 'framer-motion';
-import Logo from '../../components/Logo';
-import ThemeToggle from '../../components/ThemeToggle';
 import { LoginForm } from '../../components/auth/LoginForm';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <Logo size="md" />
-        <ThemeToggle />
-      </header>
-
       <main className="container mx-auto px-4 py-12 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

@@ -1,4 +1,3 @@
-// src/stores/authStore.ts
 import { create } from 'zustand';
 import type { User } from '../types/auth';
 
@@ -33,11 +32,18 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
   },
 
-  register: async (name, email, password) => {
+  register: async (name: string, email: string, password: string) => {
     set({ isLoading: true, error: null });
     try {
       const { register } = await import('../api/auth');
-      const { user, token } = await register({ name, email, password, password_confirmation: password });
+      const payload = {
+        name,
+        email,
+        password,
+        password_confirmation: password,
+        terms: true
+      };
+      const { user, token } = await register(payload);
       localStorage.setItem('token', token);
       set({ user, token, isLoading: false });
     } catch (error: any) {

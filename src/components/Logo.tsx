@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Waves } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 type LogoSize = 'sm' | 'md' | 'lg';
 
@@ -21,7 +22,7 @@ const Logo = ({ size = 'md' }: LogoProps) => {
       className={`flex items-center space-x-2 ${sizeClasses[size]}`}
     >
       <Waves className="text-primary-light dark:text-primary-dark w-full h-full" />
-      <span className="text-xl font-bold text-primary-light dark:text-primary-dark">Echonet</span>
+      <Link to={'/home'} className="text-xl font-bold text-primary-light dark:text-primary-dark">Echonet</Link>
     </motion.div>
   );
 };

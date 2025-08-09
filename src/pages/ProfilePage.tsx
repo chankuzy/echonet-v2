@@ -1,15 +1,11 @@
-import { ProfileHeader, UserInfo, ProfileTabs, ProfilePosts, FloatingActionButton } from '../components/profile';
-import ThemeToggle from '../components/ThemeToggle';
+import { ProfileHeader, UserInfo, ProfileTabs } from '../components/Profile';
 
 export const ProfilePage = () => {
   return (
-    <div className="max-w-4xl mx-auto pb-20">
-        <ThemeToggle />
+    <div className="max-w-4xl mx-auto pb-24 scroll-thin">
       <ProfileHeader />
       <UserInfo />
       <ProfileTabs />
-      <ProfilePosts />
-      <FloatingActionButton />
     </div>
   );
 };

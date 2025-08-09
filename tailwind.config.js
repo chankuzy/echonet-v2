@@ -9,24 +9,24 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: '#6366f1', // indigo-500
-          dark: '#818cf8', // indigo-400
+          light: '#6366f1',
+          dark: '#818cf8',
         },
         secondary: {
-          light: '#10b981', // emerald-500
-          dark: '#34d399', // emerald-400
+          light: '#10b981',
+          dark: '#34d399',
         },
         background: {
           light: '#ffffff',
-          dark: '#0f172a', // slate-900
+          dark: '#0f172a',
         },
         card: {
-          light: '#f8fafc', // slate-50
-          dark: '#1e293b', // slate-800
+          light: '#f8fafc',
+          dark: '#1e293b',
         },
         text: {
-          light: '#334155', // slate-700
-          dark: '#e2e8f0', // slate-200
+          light: '#334155',
+          dark: '#e2e8f0',
         },
       },
     },

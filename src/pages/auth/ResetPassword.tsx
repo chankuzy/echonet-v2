@@ -1,11 +1,8 @@
-// src/pages/ResetPassword.tsx
 import { useForm } from 'react-hook-form';
 import { Lock, Key, Mail } from 'lucide-react';
 import Button from '../../components/ui/Button';
 import Input from '../../components/ui/Input';
 import { Link, useSearchParams } from 'react-router-dom';
-import Logo from '../../components/Logo';
-import ThemeToggle from '../../components/ThemeToggle';
 
 interface ResetPasswordForm {
   email: string;
@@ -46,11 +43,6 @@ export const ResetPassword = () => {
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <Logo size="md" />
-        <ThemeToggle />
-      </header>
-
       <main className="container mx-auto px-4 py-12 flex flex-col items-center">
         <div className="w-full max-w-md bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-sm">
           <div className="text-center mb-8">

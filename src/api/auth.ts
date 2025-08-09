@@ -1,8 +1,7 @@
-// src/api/auth.ts
 import axios from 'axios';
-import type { LoginCredentials, RegisterCredentials, AuthResponse } from '../types/auth';
+import type { LoginCredentials, RegisterCredentials, AuthResponse, User } from '../types/auth';
 
-const API_URL = 'https://your-laravel-api.com/api';
+const API_URL = 'http://localhost:8000/api';
 
 export const login = async (credentials: LoginCredentials): Promise<AuthResponse> => {
   const response = await axios.post(`${API_URL}/login`, credentials);

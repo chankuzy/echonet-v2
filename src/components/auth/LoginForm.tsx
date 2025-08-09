@@ -1,19 +1,20 @@
-// src/components/Auth/LoginForm.tsx
 import { useForm } from 'react-hook-form';
-import { Mail, Lock } from 'lucide-react';
+import { Mail, Lock, LoaderCircle } from 'lucide-react';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
 import { useAuthStore } from '../../stores/authStore';
 import type { LoginCredentials } from '../../types/auth';
 import { SocialAuthButtons } from './SocialAuthButtons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginCredentials>();
   const { login, isLoading, error: authError } = useAuthStore();
+  const navigate = useNavigate();
 
   const onSubmit = async (data: LoginCredentials) => {
     await login(data.email, data.password);
+    navigate('/home');
   };
 
   return (
@@ -85,7 +86,7 @@ export const LoginForm = () => {
       </div>
 
       <Button type="submit" className="w-full mt-6" disabled={isLoading}>
-        {isLoading ? 'Signing in...' : 'Sign In'}
+        {isLoading ? <LoaderCircle className="flex place-self-center" /> : 'Sign In'}
       </Button>
 
       <SocialAuthButtons loading={isLoading} />

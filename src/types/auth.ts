@@ -1,4 +1,3 @@
-// src/types/auth.ts
 export interface User {
   id: number;
   name: string;
@@ -16,7 +15,10 @@ export interface LoginCredentials {
   password: string;
 }
 
-export interface RegisterCredentials extends LoginCredentials {
+export interface RegisterCredentials {
   name: string;
+  email: string;
+  password: string;
   password_confirmation: string;
+  terms: boolean;
 }
