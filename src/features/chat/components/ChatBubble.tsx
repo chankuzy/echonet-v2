@@ -23,7 +23,7 @@ export const ChatBubble = ({
         }`}
       >
         {/* Message content */}
-        <p className="whitespace-pre-wrap">{message.content}</p>
+        <p className="whitespace-pre-wrap">{message.message}</p>
         
         {/* Timestamp */}
         <div className={`text-xs mt-1 flex items-center justify-end gap-1 ${

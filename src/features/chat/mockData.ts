@@ -9,7 +9,7 @@ export interface User {
 export interface Message {
   id: string;
   sender: User;
-  content: string;
+  message: string;
   timestamp: Date;
   status: string
 }
@@ -42,7 +42,7 @@ export const mockConversations: Conversation[] = [
     lastMessage: {
       id: "msg-1",
       sender: mockUser,
-      content: "Hey, how's the project going?",
+      message: "Hey, how's the project going?",
       timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 mins ago
       status: "sent"
     },

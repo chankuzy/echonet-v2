@@ -1,12 +1,13 @@
 // pages/mobile/ChatScreen.tsx
-import { useNavigate, useParams } from 'react-router-dom';
-import { TopBar, BottomNav } from '../../components/mobile';
-import { ChatInput, ChatBubbles } from '../../components';
+import { useNavigate } from 'react-router-dom';
+import { BottomNav } from '../components/navigation/BottomNav';
+import { ChatInput } from '../features/chat/components/ChatInput';
+// import { ChatBubble } from '../features/chat/components/ChatBubble';
 import { MobileTopbar } from '../components/navigation/MobileTopbar';
 
 export const ChatScreen = () => {
   const navigate = useNavigate();
-  const { conversationId } = useParams();
+  // const { conversationId } = useParams();
 
   return (
     <div className="h-screen flex flex-col pb-16"> {/* Full viewport height */}
@@ -17,10 +18,20 @@ export const ChatScreen = () => {
       />
       
       <div className="flex-1 overflow-y-auto">
-        <ChatBubbles conversationId={conversationId} />
+        {/* Example: Replace with your actual messages array */}
+        {/* messages.map((message) => (
+          <ChatBubble
+            key={message.id}
+            message={message}
+            isCurrentUser={message.senderId === currentUserId}
+          />
+        )) */}
       </div>
       
-      <ChatInput />
+      <ChatInput onSend={(msg: string) => {
+        // TODO: handle sending the message
+        console.log('Send message:', msg);
+      }} />
       
       <BottomNav />
     </div>

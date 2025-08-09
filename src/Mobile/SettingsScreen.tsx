@@ -33,8 +33,8 @@ import useThemeStore from '../stores/themeStore';
 import { Switch } from '../components/ui/Switch';
 
 export const SettingsScreen = () => {
-  const isDarkMode = useThemeStore((state) => state.darkMode);
-  const toggleDarkMode = useThemeStore((state) => state.toggleDarkMode);
+  // const isDarkMode = useThemeStore((state) => state.darkMode);
+  // const toggleDarkMode = useThemeStore((state) => state.toggleDarkMode);
   const [activeSection, setActiveSection] = useState('general');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -417,8 +417,10 @@ const AccountSettings = () => {
   );
 };
 
+type SecuritySettingKey = 'emailVerification' | 'passwordChangeRequired' | 'loginAlerts' | 'backupCodes';
+
 const SecuritySettings = () => {
-  const [securitySettings, setSecuritySettings] = useState({
+  const [securitySettings, setSecuritySettings] = useState<Record<SecuritySettingKey | 'twoFactorAuth', boolean>>({
     twoFactorAuth: true,
     emailVerification: true,
     passwordChangeRequired: false,
@@ -485,7 +487,7 @@ const SecuritySettings = () => {
         </div>
 
         {/* Security Options */}
-        {Object.entries(SECURITY_OPTIONS).map(([key, option]) => (
+        {(Object.entries(SECURITY_OPTIONS) as [SecuritySettingKey, typeof SECURITY_OPTIONS[SecuritySettingKey]][]).map(([key, option]) => (
           <div 
             key={key}
             className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm"
