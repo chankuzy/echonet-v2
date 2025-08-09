@@ -24,13 +24,13 @@ const KpiCards = () => {
 };
 
 const ChartSection = () => {
-  const lineOptions = {
-    chart: { background: "transparent", toolbar: { show: false } },
-    stroke: { curve: "smooth", width: 1 },
-    xaxis: { categories: ["Mon", "Tue", "Wed", "Thu", "Fri"] },
-    colors: ["#3b82f6"],
-  };
-  const lineSeries = [{ name: "Focus Intensity", data: [30, 70, 50, 90, 80] }];
+  // const lineOptions = {
+  //   chart: { background: "transparent", toolbar: { show: false } },
+  //   stroke: { curve: "smooth", width: 1 },
+  //   xaxis: { categories: ["Mon", "Tue", "Wed", "Thu", "Fri"] },
+  //   colors: ["#3b82f6"],
+  // };
+  // const lineSeries = [{ name: "Focus Intensity", data: [30, 70, 50, 90, 80] }];
 
   const donutOptions = {
     chart: { background: "transparent" },

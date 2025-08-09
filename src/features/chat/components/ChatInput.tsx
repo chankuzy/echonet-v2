@@ -8,15 +8,15 @@ import {
   Video,
   File
 } from 'lucide-react';
-import EmojiPicker from 'emoji-picker-react';
-import useThemeStore from '../../../stores/themeStore';
+// import EmojiPicker from 'emoji-picker-react';
+// import useThemeStore from '../../../stores/themeStore';
 
 export const ChatInput = ({ onSend }: { onSend: (msg: string) => void }) => {
   const [message, setMessage] = useState('');
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const pickerRef = useRef<HTMLDivElement>(null);
-  const { theme } = useThemeStore();
+  // const { theme } = useThemeStore();
 
   // Close emoji picker when clicking outside
   useEffect(() => {
@@ -39,11 +39,11 @@ export const ChatInput = ({ onSend }: { onSend: (msg: string) => void }) => {
     }
   }, [showEmojiPicker]);
 
-  const handleEmojiSelect = (emojiData: any) => {
-    setMessage(prev => prev + emojiData.emoji);
-    inputRef.current?.focus();
-    setShowEmojiPicker(false); // Close after selection
-  };
+  // const handleEmojiSelect = (emojiData: any) => {
+  //   setMessage(prev => prev + emojiData.emoji);
+  //   inputRef.current?.focus();
+  //   setShowEmojiPicker(false); // Close after selection
+  // };
 
   return (
     <div className="sticky bottom-0 bg-white dark:bg-gray-900 border-t dark:border-gray-800 p-2">
