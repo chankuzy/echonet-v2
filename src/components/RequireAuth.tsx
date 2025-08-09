@@ -3,7 +3,8 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 export default function RequireAuth({ children }: { children: ReactNode }) {
   const token = localStorage.getItem('token');
-  const user = JSON.parse(localStorage.getItem("user"));
+  const userString = localStorage.getItem("user");
+  const user = userString ? JSON.parse(userString) : null;
   const location = useLocation();
 
   if (!token) {

@@ -1,15 +1,14 @@
 // src/components/auth/SocialAuthButtons.tsx
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { GithubIcon } from 'lucide-react';
 import Button from '../ui/Button';
-import { useAuthStore } from '../../stores/authStore';
+// import { useAuthStore } from '../../stores/authStore';
 
 interface SocialAuthButtonsProps {
   loading: boolean;
 }
 
 export const SocialAuthButtons = ({ loading }: SocialAuthButtonsProps) => {
-  const { googleLogin, githubLogin } = useAuthStore();
+  // const { googleLogin, githubLogin } = useAuthStore();
 
   const handleGoogleLogin = () => {
     // Google OAuth implementation
