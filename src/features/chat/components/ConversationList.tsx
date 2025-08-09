@@ -46,7 +46,7 @@ export const ConversationList = ({
               <div className="flex-1 min-w-0">
                 <h3 className="font-medium truncate">{conv.participants[0].name}</h3>
                 <p className="text-sm text-gray-500 truncate">
-                  {conv.lastMessage.content}
+                  {/* {conv.lastMessage.content} */}
                 </p>
               </div>
               <div className="text-xs text-gray-400">

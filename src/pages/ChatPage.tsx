@@ -13,7 +13,7 @@ export const ChatPage = () => {
     const newMessage: Message = {
       id: `msg-${Date.now()}`,
       sender: mockUser,
-      content,
+      message: content,
       timestamp: new Date(),
       status: 'sent'
     };

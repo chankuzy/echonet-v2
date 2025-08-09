@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import Button from '../../components/ui/Button';
-import Logo from '../../components/Logo';
-import ThemeToggle from '../../components/ThemeToggle';
 
 export const VerifyEmail = () => {
   const [searchParams] = useSearchParams();
@@ -37,7 +35,7 @@ export const VerifyEmail = () => {
         setStatus('verified');
       } catch (err) {
         setStatus('failed');
-        setError(err.message);
+        setError(err instanceof Error ? err.message : 'An error occurred');
       }
     };
 

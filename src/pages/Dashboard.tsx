@@ -44,7 +44,7 @@ const ChartSection = () => {
     <div className="grid grid-cols-2 gap-6 mt-6">
       <div className="bg-[#131622] p-4 rounded-xl border border-gray-800">
         <div className="text-gray-300 mb-2">Performance Analytics</div>
-        <ApexCharts options={lineOptions} series={lineSeries} type="area" height={200} />
+        {/* <ApexCharts options={lineOptions} series={lineSeries} type="area" height={200} /> */}
       </div>
       <div className="bg-[#131622] p-4 rounded-xl border border-gray-800">
         <div className="text-gray-300 mb-2">Kill Mode Breakdown</div>

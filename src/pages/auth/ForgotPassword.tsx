@@ -25,7 +25,7 @@ export const ForgotPassword = () => {
       if (!response.ok) throw new Error('Failed to send reset link');
       alert('Password reset link sent to your email');
     } catch (error) {
-      alert(error.message);
+      alert(error);
     }
   };
 

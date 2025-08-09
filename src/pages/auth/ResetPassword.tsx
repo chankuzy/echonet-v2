@@ -37,7 +37,7 @@ export const ResetPassword = () => {
       if (!response.ok) throw new Error('Failed to reset password');
       alert('Password reset successfully! You can now login with your new password');
     } catch (error) {
-      alert(error.message);
+      alert(error);
     }
   };
 

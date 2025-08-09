@@ -16,7 +16,7 @@ export const ChatInput = ({ onSend }: { onSend: (msg: string) => void }) => {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const pickerRef = useRef<HTMLDivElement>(null);
-  const isDarkMode = useThemeStore(state => state.darkMode);
+  const { theme } = useThemeStore();
 
   // Close emoji picker when clicking outside
   useEffect(() => {
@@ -53,15 +53,15 @@ export const ChatInput = ({ onSend }: { onSend: (msg: string) => void }) => {
           ref={pickerRef}
           className="absolute bottom-16 left-0 right-0 z-10"
         >
-          <EmojiPicker
+          {/* <EmojiPicker
             onEmojiClick={handleEmojiSelect}
             width="100%"
             height={350}
             previewConfig={{ showPreview: false }}
             searchDisabled={true}
             skinTonesDisabled={true}
-            theme={isDarkMode ? 'dark' : 'light'}
-          />
+            theme={theme}
+          /> */}
         </div>
       )}
 
